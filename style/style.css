@@ -24,25 +24,37 @@ body nav .hamburger {
   display: flex;
   position: relative;
   align-items: center;
-  border: 2px dashed green;
   margin-right: 0.7rem;
 }
 body nav .hamburger label {
   right: 0;
-  border: 2px dashed #000;
   width: 2rem;
   height: 2rem;
   position: absolute;
   cursor: pointer;
 }
-body nav .hamburger label div {
+body nav .hamburger label > div {
+  height: 3px;
   background-color: #000;
+  position: absolute;
+  width: 100%;
 }
-body nav .hamburger label div:nth-child(1) {
-  border: 2px dashed red;
+body nav .hamburger label > div:nth-child(2) {
+  top: calc(1rem - 3px);
 }
-body nav .hamburger label div:nth-child(2) {
-  border: 2px dashed green;
+body nav .hamburger label > div:nth-child(3) {
+  bottom: 0;
+  display: flex;
+  background-color: transparent;
+  justify-content: space-between;
+}
+body nav .hamburger label > div:nth-child(3) div:nth-child(1) {
+  background-color: #000;
+  width: 60%;
+}
+body nav .hamburger label > div:nth-child(3) div:nth-child(2) {
+  width: 20%;
+  background-color: orange;
 }
 body nav .hamburger input {
   display: none;
