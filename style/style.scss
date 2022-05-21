@@ -1,3 +1,67 @@
+$navButtonSize: 2rem;
+
 body {
+    font-family: 'Lemon/Milk', sans-serif;
+    //font-family: 'Lemon/Milk light', sans-serif;
+
     background-color: #e5e5e5;
+
+    nav {
+        border: 2px dashed red;
+        display: flex;
+        justify-content: space-between;
+
+        .logoWrapper {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 2.5rem;
+                height: 2.5rem;
+                margin: .7rem;
+            }
+
+            h1 {
+                font-size: 1.2rem
+            }
+
+            display:flex;
+
+        }
+
+        .hamburger {
+            display: flex;
+            position: relative;
+            align-items: center;
+            border: 2px dashed green;
+            margin-right: .7rem;
+
+            label {
+                right: 0;
+                border: 2px dashed #000;
+                width: $navButtonSize;
+                height: $navButtonSize;
+                position: absolute;
+                cursor: pointer;
+
+                div {
+                    background-color: #000;
+                    &:nth-child(1) {
+                        border: 2px dashed red;
+                    }
+                    &:nth-child(2){
+                        border: 2px dashed green;
+                    }
+                }
+            }
+
+            input {
+                display: none;
+            }
+
+            ol {
+                display: none;
+            }
+        }
+    }
 }
