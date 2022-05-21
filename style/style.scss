@@ -10,6 +10,8 @@ body {
     margin: 0;
 
     nav {
+        z-index: 2;
+        position: relative;
         //border: 2px dashed red;
         display: flex;
         justify-content: space-between;
@@ -81,19 +83,20 @@ body {
             }
 
             ol {
-
-                display: none;
+                z-index: -1;
+                position: absolute;
+                top: -100vh;
+                transition: .5s;
+                display: flex;
+                flex-direction: column;
+                right: -2rem;
+                padding: 20px 10px;
+                list-style: none;
+                width: 100vw;
             }
             #toggler:checked ~{
                 ol{
-                    display: flex;
-                    flex-direction: column;
-                    position: absolute;
                     top:100%;
-                    right: -2rem;
-                    border: 2px dashed red;
-                    width: 100vw;
-                    list-style: none;
 
                 }
             }
