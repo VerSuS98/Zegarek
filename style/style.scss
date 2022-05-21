@@ -1,15 +1,20 @@
 $navButtonSize: 2rem;
-
+*{
+    box-sizing: border-box;
+}
 body {
     font-family: 'Lemon/Milk', sans-serif;
     //font-family: 'Lemon/Milk light', sans-serif;
 
     background-color: #e5e5e5;
+    margin: 0;
 
     nav {
-        border: 2px dashed red;
+        //border: 2px dashed red;
         display: flex;
         justify-content: space-between;
+        padding: 2rem 2rem .5rem 2rem;
+        border-bottom: 2px solid #000;
 
         .logoWrapper {
             display: flex;
@@ -34,9 +39,9 @@ body {
             position: relative;
             align-items: center;
             //border: 2px dashed green;
-            margin-right: .7rem;
-
+            
             label {
+                margin-right: .7rem;
                 right: 0;
                 //border: 2px dashed #000;
                 width: $navButtonSize;
@@ -45,8 +50,8 @@ body {
                 cursor: pointer;
 
                 >div {
-                    $barHeight:6px;
-                    height: 3px;
+                    $barHeight:4px;
+                    height: $barHeight;
                     background-color: #000;
                     position: absolute;
                     width: 100%;
@@ -76,7 +81,21 @@ body {
             }
 
             ol {
+
                 display: none;
+            }
+            #toggler:checked ~{
+                ol{
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    top:100%;
+                    right: -2rem;
+                    border: 2px dashed red;
+                    width: 100vw;
+                    list-style: none;
+
+                }
             }
         }
     }

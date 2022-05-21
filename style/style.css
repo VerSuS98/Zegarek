@@ -1,11 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Lemon/Milk", sans-serif;
   background-color: #e5e5e5;
+  margin: 0;
 }
 body nav {
-  border: 2px dashed red;
   display: flex;
   justify-content: space-between;
+  padding: 2rem 2rem 0.5rem 2rem;
+  border-bottom: 2px solid #000;
 }
 body nav .logoWrapper {
   display: flex;
@@ -24,9 +30,9 @@ body nav .hamburger {
   display: flex;
   position: relative;
   align-items: center;
-  margin-right: 0.7rem;
 }
 body nav .hamburger label {
+  margin-right: 0.7rem;
   right: 0;
   width: 2rem;
   height: 2rem;
@@ -34,13 +40,13 @@ body nav .hamburger label {
   cursor: pointer;
 }
 body nav .hamburger label > div {
-  height: 3px;
+  height: 4px;
   background-color: #000;
   position: absolute;
   width: 100%;
 }
 body nav .hamburger label > div:nth-child(2) {
-  top: calc(1rem - 3px);
+  top: calc(1rem - 2px);
 }
 body nav .hamburger label > div:nth-child(3) {
   bottom: 0;
@@ -61,4 +67,14 @@ body nav .hamburger input {
 }
 body nav .hamburger ol {
   display: none;
+}
+body nav .hamburger #toggler:checked ~ ol {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: -2rem;
+  border: 2px dashed red;
+  width: 100vw;
+  list-style: none;
 }/*# sourceMappingURL=style.css.map */
